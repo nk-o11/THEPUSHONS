@@ -1,4 +1,5 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Badeen+Display&display=swap" rel="stylesheet">
@@ -8,20 +9,14 @@
     * {box-sizing: border-box;}
     /* https://developer.mozilla.org/ja/docs/Web/CSS/box-sizing */
 
-    html,body {
-        overflow: hidden;
-    }
-
     body {
         font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium","游ゴシック", "Yu Gothic", sans-serif;
-        background-image: url(./images/asya.jpg);
         background-repeat: no-repeat;
         background-position: center top;
         background-size: cover;
         background-attachment: fixed;
         margin: 0;
         background-color: black;
-        z-index: -1;
     }
 
     /* google fonts */
@@ -39,9 +34,8 @@
     }
 
     .header {
-        background: var(--background-navbar);
         width: 100%;
-        height: 140px;
+        height: 100px;
         position: fixed;
         top: 0;
         left: 0;
@@ -182,39 +176,25 @@
         margin-bottom: 10px;
     }
 
-    .wapp { 
-        width: 90%;
-        margin: 460px auto;
+    .disco {
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8);
+        text-align: center;
+        padding-top: 50%;
     }
 
-    .swiper {
-        width: 560px;
-        height: 700px;
-      }
-
-    .swiper-slide {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 18px;
-        font-size: 22px;
-        font-weight: bold;
-        color: #fff;
-    }
-
-    .swiper-img{
-        width: 560px;
-        height: 700px;
+    .disco h1 {
+        font-size: 50px;
+        color: white;
     }
 
     footer {
         position: fixed;
         bottom: 0;
+        left: 0;
         z-index: 2;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        margin-top: 50px;
-        margin-bottom: 0;
         text-align: center;
     }
 
@@ -239,28 +219,9 @@
     </ul>
 </header>
 
-<div class="wapp">
-    <!-- Swiper -->
-
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><a href="link.html#1"><img src="./images/taiga1.jpg" alt="" class="swiper-img"></a></div>
-            <div class="swiper-slide"><a href="link.html#2"><img src="./images/takumi1.jpg" alt="" class="swiper-img"></a></div>
-            <div class="swiper-slide"><a href="link.html#3"><img src="./images/haru1.jpg" alt="" class="swiper-img"></a></div>
-            <div class="swiper-slide"><a href="link.html#4"><img src="./images/yuki1.jpg" alt="" class="swiper-img"></a></div>
-        </div>
-    </div>
-
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-        <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-        effect: "cards",
-        grabCursor: true,
-        });
-    </script>
+<div class="disco">
+    <h1>僕たちの最高の曲を</h1>
+    <h1>楽しみにお待ちください！！</h1>
 </div>
 
 <footer>

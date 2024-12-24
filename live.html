@@ -1,7 +1,10 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Badeen+Display&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+
 <title>@THEPUSHONS_OFFICIAL</title>
 <style>
     /* 全体共通 */
@@ -14,14 +17,12 @@
 
     body {
         font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium","游ゴシック", "Yu Gothic", sans-serif;
-        background-image: url(./images/asya.jpg);
         background-repeat: no-repeat;
         background-position: center top;
         background-size: cover;
         background-attachment: fixed;
         margin: 0;
-        background-color: black;
-        z-index: -1;
+        background-color: rgba(0,0,0,0.7);
     }
 
     /* google fonts */
@@ -31,17 +32,23 @@
         font-style: normal;
     }
 
+    .dela-gothic-one-regular {
+        font-family: "Dela Gothic One", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+
 
     /* スマホファスト用 */
     /* Navbar & Navmenu color */
     :root {
-        --background-navbar: rgb(0,0,0);
+        --background-navbar: rgba(0,0,0,0.7);
     }
 
     .header {
-        background: var(--background-navbar);
         width: 100%;
-        height: 140px;
+        height: 100px;
         position: fixed;
         top: 0;
         left: 0;
@@ -182,39 +189,70 @@
         margin-bottom: 10px;
     }
 
-    .wapp { 
-        width: 90%;
-        margin: 460px auto;
+    .index-news{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 100vh;
+        padding: 130px 20px;
     }
 
-    .swiper {
-        width: 560px;
-        height: 700px;
-      }
-
-    .swiper-slide {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 18px;
-        font-size: 22px;
-        font-weight: bold;
-        color: #fff;
+    .index-news ul li h1{
+        color: white;
     }
 
-    .swiper-img{
-        width: 560px;
-        height: 700px;
+    .start h1{
+        position: relative;
+        z-index: 2;
+        color: rgba(255, 0, 0, 0.7);
+        font-size: 70px;
+        text-align: center;
+    }
+
+    .index-osirase ul {
+        padding-top: 20px;
+    }
+    .index-osirase ul li {
+        border-bottom: solid 1px white;
+        list-style: none;
+        text-align: center;
+    }
+    .index-osirase ul li a {
+        display: block;
+        width: 100%;
+        font-size: 40px;
+        box-sizing: border-box;
+        color: rgba(255, 0, 0, 0.7);
+        text-decoration: none;
+        padding: 5px 15px 5px 0;
+        position: relative;
+    }
+
+    .index-osirase ul li a:hover{
+        color: rgba(255, 255, 0, 0.7);
+    }
+
+    .index-osirase ul li a::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-top: solid 2px white;
+        border-right: solid 2px white;
+        transform: rotate(45deg);
+        position: absolute;
+        right: 18px;
+        top: 26px;
     }
 
     footer {
         position: fixed;
         bottom: 0;
+        left: 0;
         z-index: 2;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        margin-top: 50px;
-        margin-bottom: 0;
         text-align: center;
     }
 
@@ -239,28 +277,27 @@
     </ul>
 </header>
 
-<div class="wapp">
-    <!-- Swiper -->
-
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><a href="link.html#1"><img src="./images/taiga1.jpg" alt="" class="swiper-img"></a></div>
-            <div class="swiper-slide"><a href="link.html#2"><img src="./images/takumi1.jpg" alt="" class="swiper-img"></a></div>
-            <div class="swiper-slide"><a href="link.html#3"><img src="./images/haru1.jpg" alt="" class="swiper-img"></a></div>
-            <div class="swiper-slide"><a href="link.html#4"><img src="./images/yuki1.jpg" alt="" class="swiper-img"></a></div>
-        </div>
+<div class="index-news">
+    <div class="start">
+        <h1 class="badeen-display-regular">Live</h1>
     </div>
+    <div class="index-osirase">
+        <ul>
+            <li>
+                <p><a href="link.html#live1" class="dela-gothic-one-regular">2024/09/29　[FORTE]</a></p>
+            </li>
+            <li>
+                <p><a href="link.html#live2" class="dela-gothic-one-regular">2024/10/13　[SCRAMBLES]</a></p>
+            </li>
+            <li>
+                <p><a href="link.html#live3" class="dela-gothic-one-regular">2024/12/15　[SCRAMBLES]</a></p>
+            </li>
+            <li>
+                <p><a href="link.html#live4" class="dela-gothic-one-regular">2025/01/26　[久留米ウエポン]</a></p>
+            </li>
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-        <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-        effect: "cards",
-        grabCursor: true,
-        });
-    </script>
+        </ul>
+    </div>
 </div>
 
 <footer>
