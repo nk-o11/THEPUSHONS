@@ -1,0 +1,83 @@
+/* 全体共通 */
+* {box-sizing: border-box;}
+/* https://developer.mozilla.org/ja/docs/Web/CSS/box-sizing */
+
+body {
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium","游ゴシック", "Yu Gothic", sans-serif;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    background-color: white;
+}
+
+html,body {
+  overflow: hidden;
+}
+
+.link-wapp {
+  width: 100%;
+}
+
+.profile {
+  width: 390px;
+  height: 100vh;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  padding-top: 50px;
+}
+
+.hito {
+  width: 380px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+.profile-img {
+  width: 350px;
+  margin: 10px auto 0 auto;
+}
+
+.bun {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.bun h1 {
+  font-size: 20px;
+  color: white;
+}
+
+.btn-wapp { 
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.back {
+  width: 50px;
+  margin: 20px 0 0 5px;
+}
+
+.backbtn {
+  width: 100%;
+}
+
+.sns {
+  width: 300px;
+  margin: 0 20px 0 0;
+  padding: 0;
+}
+
+.sns ul{
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+}
+
+.sns ul li a {
+  font-size: 40px;
+  color: black;
+}

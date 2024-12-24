@@ -1,0 +1,268 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Badeen+Display&display=swap" rel="stylesheet">
+<title>@THEPUSHONS_OFFICIAL</title>
+<style>
+    /* 全体共通 */
+    * {box-sizing: border-box;}
+    /* https://developer.mozilla.org/ja/docs/Web/CSS/box-sizing */
+
+    html,body {
+        overflow: hidden;
+    }
+
+    body {
+        font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium","游ゴシック", "Yu Gothic", sans-serif;
+        background-image: url(./images/asya.jpg);
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+        background-attachment: fixed;
+        margin: 0;
+        background-color: black;
+        z-index: -1;
+    }
+
+    /* google fonts */
+    .badeen-display-regular {
+        font-family: "Badeen Display", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+
+    /* スマホファスト用 */
+    /* Navbar & Navmenu color */
+    :root {
+        --background-navbar: rgb(0,0,0);
+    }
+
+    .header {
+        background: var(--background-navbar);
+        width: 100%;
+        height: 140px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+    }
+
+    /* Nav items */
+    .menu {
+        list-style: none;
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 0;
+        margin-top: 130px;
+        padding: 0 0 10px 0;
+        z-index: 9999;
+        clear: both;
+        background: var(--background-navbar);
+        transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+        transform: scale(1, 0);
+        transform-origin: top;
+        text-align: center;
+    }
+
+    /* Hamburger menu button */
+    .menu-btn:checked ~ .menu {
+        transform: scale(1, 1);
+        transform-origin: top;
+        transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+    }
+
+    /* Hamburger menbu text */
+    .menu a {
+        text-decoration: none;
+        font-weight: 500;
+        letter-spacing: 2px;
+        font-size: 40px;
+        text-transform: capitalize;
+        color: #ddd;
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    .nav-img{
+       width: 250px;
+    }
+
+    .menu li {
+        border-top: 5px solid rgb(75, 75, 75);
+        padding: 3px 0;
+        margin: 0 54px;
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    .menu-btn:checked ~ .menu a,
+    .menu-btn:checked ~ .menu li {
+        opacity: 1;
+        transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.2s;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    .menu-icon {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        padding: 65px 50px;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    .navicon {
+        background: #ddd;
+        display: block;
+        height: 10px;
+        width: 60px;
+        position: relative;
+        transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+    }
+
+    .navicon:before,
+    .navicon:after {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background: #ddd;
+        transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+    }
+
+    .navicon:before {
+        top: 20px;
+    }
+
+    .navicon:after {
+        bottom: 20px;
+    }
+
+    /* Hamburger Menu Animation Start */
+    .menu-btn:checked ~ .menu-icon .navicon:before {
+        transform: rotate(-45deg);
+    }
+
+    .menu-btn:checked ~ .menu-icon .navicon:after {
+        transform: rotate(45deg);
+    }
+
+    .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before {
+        top: 0;
+    }
+    .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+        bottom: 0;
+    }
+
+    .menu-btn:checked ~ .menu-icon .navicon {
+        background: rgba(0, 0, 0, 0);
+        transition: 0.2192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+    }
+    /* Hamburger Menu Animation End */
+
+    /* Navbar Container */
+    .navtext-container {
+        width: 100%;
+        position: absolute;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon-img{
+        width: 300px;
+        margin: 0 auto;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    .wapp { 
+        width: 90%;
+        margin: 460px auto;
+    }
+
+    .swiper {
+        width: 560px;
+        height: 700px;
+      }
+
+    .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 18px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .swiper-img{
+        width: 560px;
+        height: 700px;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        z-index: 2;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        margin-top: 50px;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    footer p {
+        font-size: 40px;
+        color: #ddd;
+    }
+
+</style>
+
+<header class="header">
+    <div class="navtext-container">
+        <img src="./images/logo.png" alt="logo-img" class="icon-img">
+    </div>
+    <input type="checkbox" class="menu-btn" id="menu-btn">
+    <label for="menu-btn" class="menu-icon"><span class="navicon"></span></label>
+    <ul class="menu">
+        <li><a href="index.html" class="badeen-display-regular">HOME</a></li>
+        <li><a href="profile.html" class="badeen-display-regular">PROFILE</a></li>
+        <li><a href="index.html" class="badeen-display-regular">HOME</a></li>
+        <li><a href="index.html" class="badeen-display-regular">HOME</a></li>
+    </ul>
+</header>
+
+<div class="wapp">
+    <!-- Swiper -->
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="link.html#1"><img src="./images/taiga1.jpg" alt="" class="swiper-img"></a></div>
+            <div class="swiper-slide"><a href="link.html#2"><img src="./images/takumi1.jpg" alt="" class="swiper-img"></a></div>
+            <div class="swiper-slide"><a href="link.html#3"><img src="./images/haru1.jpg" alt="" class="swiper-img"></a></div>
+            <div class="swiper-slide"><a href="link.html#4"><img src="./images/yuki1.jpg" alt="" class="swiper-img"></a></div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        effect: "cards",
+        grabCursor: true,
+        });
+    </script>
+</div>
+
+<footer>
+    <p>@THEPUSHONS_OFFICIAL</p>
+</footer>
