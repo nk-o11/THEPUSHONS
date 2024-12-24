@@ -102,7 +102,7 @@ html,body {
 }
 
 .live-top h1 {
-  font-size: 40px;
+  font-size: 30px;
   color: rgba(0, 0, 0, 0.8);
   margin-bottom: 10px;
 }
@@ -115,7 +115,7 @@ html,body {
 }
 
 .new-top h1 {
-  font-size: 35px;
+  font-size: 25px;
   color: rgba(0, 0, 0, 0.8);
   margin-bottom: 10px;
 }
